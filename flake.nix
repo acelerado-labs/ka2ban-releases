@@ -10,15 +10,15 @@
       sources = {
         "aarch64-darwin" = {
           url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.5.2/ka2ban-v0.5.2-darwin-arm64.tar.gz";
-          hash = "sha256-mGhTmns1xN7ZE4eCzAHMlqwPZgL9eLBgv0i4HCkygOg=";
+          hash = "__DARWIN_ARM64_HASH__";
         };
         "x86_64-linux" = {
           url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.5.2/ka2ban-v0.5.2-linux-x64.tar.gz";
-          hash = "sha256-qngwSZ/UMapvFnrN4dmBiGcl6QQcWISdrHXWXDEYXjQ=";
+          hash = "__LINUX_X64_HASH__";
         };
         "aarch64-linux" = {
           url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.5.2/ka2ban-v0.5.2-linux-arm64.tar.gz";
-          hash = "sha256-8m+ws8YYH/ncNUDeJU+IUTGWSp1S3P6TptCuNrksrrY=";
+          hash = "__LINUX_ARM64_HASH__";
         };
       };
 
@@ -32,13 +32,6 @@
           inherit version;
           src = pkgs.fetchurl { inherit (source) url hash; };
           dontUnpack = true;
-          nativeBuildInputs = pkgs.lib.optionals pkgs.stdenv.isLinux [
-            pkgs.autoPatchelfHook
-          ];
-          buildInputs = pkgs.lib.optionals pkgs.stdenv.isLinux [
-            pkgs.glib
-            pkgs.libsecret
-          ];
           installPhase = ''
             mkdir -p $out/bin
             tar -xzf $src -C $out/bin

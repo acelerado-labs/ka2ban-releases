@@ -5,20 +5,20 @@
 
   outputs = { self, nixpkgs }:
     let
-      version = "0.6.1";
+      version = "0.6.2";
 
       sources = {
         "aarch64-darwin" = {
-          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.1/ka2ban-v0.6.1-darwin-arm64.tar.gz";
-          hash = "sha256-1XO45Snee4lNVXA1IAhK1KnMtTM9uqKmslx9DrkgNmQ=";
+          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.2/ka2ban-v0.6.2-darwin-arm64.tar.gz";
+          hash = "sha256-3hQTXWqsG4dH6rYHLYAJVeRFuIDohm4EWFr5oGIWgGM=";
         };
         "x86_64-linux" = {
-          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.1/ka2ban-v0.6.1-linux-x64.tar.gz";
-          hash = "sha256-cgm/LwC8E6DAsu86W8HRpVxk1M4nONHgLLNxfnaSpf4=";
+          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.2/ka2ban-v0.6.2-linux-x64.tar.gz";
+          hash = "sha256-1G133QbeHiFxCpV2igUiF3tVHyGi1E8Xdrlu8yW2cQE=";
         };
         "aarch64-linux" = {
-          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.1/ka2ban-v0.6.1-linux-arm64.tar.gz";
-          hash = "sha256-2E075+pO86CKSVJZNnxEtCR9/ey5QQXjEd3iYj+QSag=";
+          url = "https://github.com/acelerado-labs/ka2ban-releases/releases/download/v0.6.2/ka2ban-v0.6.2-linux-arm64.tar.gz";
+          hash = "sha256-kow9xcOq7qleP0P9EZwPv5nBE9juOQiGwgxWW+IBako=";
         };
       };
 
